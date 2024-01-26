@@ -14,7 +14,7 @@ app.post("/", async function (req, res) {
       var date = req.body.date;
       console.log(date);
       const url =
-       "https://api.nasa.gov/planetary/apod?api_key=wWprOgOGr57g1jghWiYn6Naf2WleU4ejivmVxV2m&date="+date;
+       ""+date;
       const response = await axios.get(url);
       const result = response.data;
       res.render("nasa.ejs", {
